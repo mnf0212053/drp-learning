@@ -18,3 +18,8 @@ class Houses:  # mendeklarasikan class untuk perumaham
         print('nomor: ' + str(self.nomor))
         print('dijual dengan harga ' + str(self.harga) + ' ratus juta')
         print('===========================================')
+
+
+class Hotel(Houses):
+    def __init__(self, lantai):
+        self.lantai = lantai

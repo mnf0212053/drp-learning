@@ -43,7 +43,8 @@ def navigasi():
     # Layer 2
     print('Selamat datang di aplikasi JualRumah.')
     print('1. Input data rumah')
-    print('2. Cek info \n') #  \n = escape character untuk membuat baris baru
+    print('2. Cek info') #  \n = escape character untuk membuat baris baru
+    print('3. Lakukan Penjualan \n') #  \n = escape character untuk membuat baris baru
     
     pilihan = input('Masukkan menu: ')
     if pilihan == '1':

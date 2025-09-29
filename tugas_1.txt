@@ -1,0 +1,16 @@
+Tugas Kelompok:
+Buat aplikasi sederhana sesuai topik yang sudah ditentukan dengan menggunakan
+1. If statement
+2. For/while statement
+3. Function
+4. OOP
+
+Note:
+1. Kumpulkan deskripsi singkat dari program yang akan dibuat maksimal rabu.
+   Kumpulkan di gdrive dengan format txt
+
+2. Kumpulkan aplikasi jadinya paling lambat 6 Oktober 2025, jam 12.00
+   Opsi pengumpulan
+   a. File zip (upload di google drive)
+   b. Github (sertakan link githubnya, jika memungkinkan, dibuat public)
+
