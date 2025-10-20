@@ -2,7 +2,7 @@
 # Pemrograman Berorientasi Object
 # Aplikasi penjualan rumah
 # Buat program untuk entri data rumah
-from houses.Houses import Houses
+from houses.Houses import Hotel, Houses, Ruko
 
 
 list_rumah = [] #  list objek rumah yang telah diinput
@@ -12,10 +12,26 @@ def hello(nama):
     print('Apa kabar?')
 
 def input_rumah():
+    # Jika blok dan nomor kosong, maka dianggap sebagai ruko
+    # Jika lantai kosong, maka dianggap sebagai rumah
+
     blok = input('Masukkan blok rumah: ')
     nomor = input('Masukkan nomor rumah: ')
     harga = input('Masukkan harga: ')
-    rumah = Houses(blok, nomor, harga)
+    lantai = None
+    nama_pt = None
+    
+    if not blok and not nomor:
+        nama_pt = input("Masukkan nama PT untuk ruko: ")
+    else:
+        lantai = input('Masukkan lantai: ')
+
+    if lantai:
+        rumah = Hotel(blok,nomor, harga, lantai)
+    elif nama_pt:
+        rumah = Ruko(harga, nama_pt)
+    else:
+        rumah = Houses(blok, nomor, harga)
 
     list_rumah.append(rumah)
 
