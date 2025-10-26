@@ -3,9 +3,10 @@
 # Aplikasi penjualan rumah
 # Buat program untuk entri data rumah
 from houses.Houses import Hotel, Houses, Ruko
+from storage import Storage
 
 
-list_rumah = [] #  list objek rumah yang telah diinput
+list_rumah = Storage() #  list objek rumah yang telah diinput
 
 def hello(nama):
     print('Hello ' + nama)
@@ -24,7 +25,7 @@ def input_rumah():
     if not blok and not nomor:
         nama_pt = input("Masukkan nama PT untuk ruko: ")
     else:
-        lantai = input('Masukkan lantai: ')
+        lantai = None
 
     if lantai:
         rumah = Hotel(blok,nomor, harga, lantai)
@@ -42,13 +43,15 @@ def show_info_rumah():
     # "Data rumah belum tersedia."
     print('\nInfo rumah:')
 
-    if len(list_rumah) == 0:
+    if len(list_rumah.data) == 0:
         print('===========================================')
         print('Data rumah belum tersedia.')
         print('===========================================\n')
 
     # terapkan looping dengan for untuk menampilkan info masing-masing rumah
-    for rumah in list_rumah:
+    print('Blok | Nomor | Harga')
+    print('-----------------------------')
+    for rumah in list_rumah.data:
         rumah.info_rumah()
 
 # buat fungsionalitasnya agar dapat mengakses menu dengan cara input angka

@@ -17,10 +17,7 @@ class Houses:  # mendeklarasikan class untuk perumaham
         print('dijual dengan harga ' + str(self.harga) + ' ratus juta')
 
     def info_rumah(self):
-        print('===========================================')
-        print('Info properti:')
-        self._info_rumah()
-        print('===========================================')
+        print('%s | %s | %s' % (self.blok, self.nomor, self.harga))
 
 
 class Hotel(Houses):  # Parent: Houses; Child: Hotel
