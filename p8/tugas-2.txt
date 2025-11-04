@@ -1,0 +1,4 @@
+Tugas:
+Dari projek yang sudah dikembangkan, tambahkan: 
+1. fitur export-import dalam bentuk json/csv/xls
+2. sistem database menggunakan sqlite3
