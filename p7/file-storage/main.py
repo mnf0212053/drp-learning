@@ -1,7 +1,7 @@
 import json
 # Penyimpanan Data
 # 1. File-based storage (csv (comma separated values), json, txt (tidak terstruktur), xls)
-# 2. SQL
+# 2. SQL (Structured Query Language, digunakan dalam DBMS (Database Management System) seperti Postgresql, Mysql, dll.)
 # 3. NoSQL
 
 
