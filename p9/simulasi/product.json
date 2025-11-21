@@ -1,0 +1,14 @@
+[
+    {
+        "product": "Ballpoint",
+        "price_unit": 3000
+    },
+    {
+        "product": "Notebook",
+        "price_unit": 5000
+    },
+    {
+        "product": "Coffee",
+        "price_unit": 15000
+    }
+]
