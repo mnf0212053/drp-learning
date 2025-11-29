@@ -1,0 +1,57 @@
+services:
+   namenode:
+      image: apache/hadoop:3
+      hostname: namenode
+      command: ["hdfs", "namenode"]
+      ports:
+        - 9870:9870
+      volumes:
+        - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+        - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml
+        - ./hdfs/namenode:/opt/hadoop/dfs/name
+      env_file:
+        - ./config
+      environment:
+          ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
+   datanode1:
+      image: apache/hadoop:3
+      container_name: dn1
+      hostname: dn1-9864
+      command: ["hdfs", "datanode"]
+      ports:
+        - "9864:9864"
+      volumes:
+        - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+        - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml
+        - ./hdfs/datanode1:/opt/hadoop/dfs/data
+      env_file:
+        - ./config
+   datanode2:
+      image: apache/hadoop:3
+      container_name: dn2
+      hostname: dn2-9865
+      command: ["hdfs", "datanode"]
+      ports:
+        - "9865:9864"
+      volumes:
+        - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+        - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml
+        - ./hdfs/datanode2:/opt/hadoop/dfs/data
+      env_file:
+        - ./config      
+   resourcemanager:
+      image: apache/hadoop:3
+      hostname: resourcemanager
+      command: ["yarn", "resourcemanager"]
+      ports:
+         - 8088:8088
+      env_file:
+        - ./config
+      volumes:
+        - ./test.sh:/opt/test.sh
+   nodemanager:
+      image: apache/hadoop:3
+      command: ["yarn", "nodemanager"]
+      env_file:
+        - ./config
+
