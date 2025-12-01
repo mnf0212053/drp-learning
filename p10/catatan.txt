@@ -29,3 +29,8 @@ Arsitektur HDFS:
 4. Komputer-komputer yang digunakan untuk menyimpan block file ini juga melakukan komputasi. Proses ini dilakukan menggunakan prinsip MapReduce
 5. Map: Memproses data di masing-masing block
 6. Reduce: Memproses semua hasil perhitungan dari masing-masing block
+
+==========================================================================================
+Tugas Kelompok:
+1. Install Docker
+2. Isi gform untuk menginformasikan progress installasi docker serta kendalanya
