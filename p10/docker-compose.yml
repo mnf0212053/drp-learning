@@ -9,6 +9,8 @@ services:
         - ./hadoop/core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
         - ./hadoop/hdfs-site.xml:/opt/hadoop/etc/hadoop/hdfs-site.xml
         - ./hdfs/namenode:/opt/hadoop/dfs/name
+        - ./input:/input
+        - ./job:/job
       env_file:
         - ./config
       environment:
