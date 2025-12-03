@@ -1,4 +1,5 @@
-#!/bin/bash
+@REM #!/bin/
+@echo off
 
 @REM 1. Create HDFS folder for input/output
 docker-compose exec -it namenode hdfs dfs -mkdir -p /user/student
@@ -18,4 +19,4 @@ docker-compose exec -it namenode hadoop jar /data/tools/hadoop-streaming-2.7.3.j
 docker-compose exec -it namenode hdfs dfs -get -f /user/student/output/part-00000 /data/output.txt
 
 echo "=== OUTPUT ==="
-cat /data/output.txt
+docker-compose exec -it namenode cat /data/output.txt
