@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# 1. Create HDFS folder for input/output
+@REM 1. Create HDFS folder for input/output
 docker-compose exec -it namenode hdfs dfs -mkdir -p /user/student
 docker-compose exec -it namenode hdfs dfs -mkdir -p /user/student/input
 docker-compose exec -it namenode hdfs dfs -mkdir -p /user/student/output
 
-# 2. Remove old output if exists
+@REM 2. Remove old output if exists
 docker-compose exec -it namenode hdfs dfs -rm -r /user/student/output
 
-# 3. Upload input data
+@REM 3. Upload input data
 docker-compose exec -it namenode hdfs dfs -put -f /data/input.json /user/student/input/input.json
 
-# 4. Run Hadoop Streaming job
+@REM 4. Run Hadoop Streaming job
 docker-compose exec -it namenode hadoop jar /data/tools/hadoop-streaming-2.7.3.jar -files /data/mapper.py,/data/reducer.py -mapper "python3 mapper.py" -reducer "python3 reducer.py" -input /user/student/input/input.json -output /user/student/output
 
-# 5. Fetch result to host (optional)
+@REM 5. Fetch result to host (optional)
 docker-compose exec -it namenode hdfs dfs -get -f /user/student/output/part-00000 /data/output.txt
 
 echo "=== OUTPUT ==="
