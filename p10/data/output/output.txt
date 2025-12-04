@@ -1,1 +1,38 @@
-15.0	
+block 1:	
+total income: 	2503532000.0
+transactions: 	20746
+average: 	120675.40730743276
+=======	
+most sold products:	
+=======	
+name	qty
+Gula Kita	28719.0
+Garam Laut	28559.0
+Kecap BCD	28415.0
+Kipas Angin	28370.0
+	
+block 2:	
+total income: 	758906000.0
+transactions: 	6173
+average: 	122939.57557103515
+=======	
+most sold products:	
+=======	
+name	qty
+Kipas Angin	8731.0
+Kecap BCD	8582.0
+Gula Kita	8520.0
+Garam Laut	8042.0
+	
+total:	
+total income: 	3262438000.0
+transactions: 	26919.0
+average: 	121194.62089973624
+=======	
+most sold products:	
+=======	
+name	qty
+Gula Kita	37239.0
+Kipas Angin	37101.0
+Kecap BCD	36997.0
+Garam Laut	36601.0

@@ -25,8 +25,15 @@ def convert():
             }
         )
 
+    # Create JSON file
     with open('data.json', 'w') as f:
         json.dump(data, f)
+
+    # Create JSONL file
+    with open('data.jsonl', 'w') as f:
+        for d in data:
+            json.dump(d, f)
+            f.write('\n')
 
 if __name__ == '__main__':
     convert()

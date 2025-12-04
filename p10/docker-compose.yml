@@ -8,6 +8,8 @@ services:
     environment:
       CLUSTER_NAME: mycluster
       ENSURE_NAMENODE_DIR: "/hadoop/dfs/name"
+      HDFS_CONF_dfs_blocksize: 2097152
+      HDFS_CONF_dfs_replication: 3
     ports:
       - "9870:9870"
     volumes:
