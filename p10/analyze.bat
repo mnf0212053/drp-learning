@@ -1,6 +1,10 @@
 @REM #!/bin/
 @echo off
 
+docker cp ./data/code/reducer.py namenode:/data
+docker cp ./data/code/mapper.py namenode:/data
+docker cp ./data/input/input.json namenode:/data
+
 @REM 1. Create HDFS folder for input/output
 docker-compose exec -it namenode hdfs dfs -mkdir -p /user/student
 docker-compose exec -it namenode hdfs dfs -mkdir -p /user/student/input
@@ -20,3 +24,5 @@ docker-compose exec -it namenode hdfs dfs -get -f /user/student/output/part-0000
 
 echo "=== OUTPUT ==="
 docker-compose exec -it namenode cat /data/output.txt
+
+docker cp namenode:/data/output.txt ./data/output

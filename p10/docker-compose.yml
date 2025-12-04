@@ -11,7 +11,7 @@ services:
     ports:
       - "9870:9870"
     volumes:
-      - ./data:/data
+      # - ./data:/data
       - ./hdfs/namenode:/hadoop/dfs/name
       - ./hadoop/core-site.xml:/etc/hadoop/conf/core-site.xml
       - ./hadoop/hdfs-site.xml:/etc/hadoop/conf/hdfs-site.xml
