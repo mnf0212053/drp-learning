@@ -1,8 +1,8 @@
 print('Inisiasi program')
+print('===========================')
 
-def add():  # Fungsi penjumlahan
+def add_tanpa_argumen():  # Fungsi penjumlahan
     # Perintah yang tertulis di dalam fungsi tidak akan dijalankan jika tidak dipanggil
-    print("Melakukan penjumlahan")
     # Deklarasi variabel
     a = 3
     b = 4
@@ -16,10 +16,18 @@ def add():  # Fungsi penjumlahan
     # tanpa return, fungsi akan mengembalikan None
     return c
 
+def add_dengan_argumen(angka1, angka2): # Ambil dua nilai dari argumen untuk dijumlahkan
+    hasil = angka1 + angka2
+    return hasil
+
 def f():
     print('Mengembalikan angka 1') #  Perintah ini tidak berada di dalam fungsi apapun
     return 1
 
-k = f()
-l = add()
-print(k)
+L = add_tanpa_argumen()
+
+print('Hasil penjumlahan: ', L)
+
+M = add_dengan_argumen(3, 9)
+
+print('Hasil penjumlahan: ', M)

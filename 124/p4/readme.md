@@ -6,6 +6,14 @@
 
 - Perintah yang tertulis di dalam fungsi tidak akan dijalankan jika tidak dipanggil
 
+- Sintaks:
+
+`
+def <nama fungsi>(<argumen1>, <argumen2>, dst.):
+    <Logic pemrograman>
+    return <nilai yang akan dikembalikan oleh fungsi>
+`
+
 ## Dependensi/modul Python
 
 ## Tipe Data
