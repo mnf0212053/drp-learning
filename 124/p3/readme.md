@@ -80,15 +80,5 @@ contoh: `a = 3` (mendeklarasikan/mendefinisikan variabel a sebagai 3)
 
 - Fungsional hashtag .py berbeda dengan fungsional pada file .md
 
-## Dependensi/modul Python
 
-## Fungsi Python
-
-## Tipe Data
-
-## If Statement
-
-## Looping - For Statement
-
-## Looping - While
 
