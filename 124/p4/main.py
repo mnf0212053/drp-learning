@@ -1,33 +1,18 @@
+import fungsi  # dependensi / modul
+import dependensi_lain.pengurangan as pgr  # alias / nama lain
+import numpy  # modul 3rd party (non-custom)
+
 print('Inisiasi program')
 print('===========================')
 
-def add_tanpa_argumen():  # Fungsi penjumlahan
-    # Perintah yang tertulis di dalam fungsi tidak akan dijalankan jika tidak dipanggil
-    # Deklarasi variabel
-    a = 3
-    b = 4
-
-    # Komputasi
-    # Variabel c ini hanya bisa diakses di dalam fungsi ini (variabel lokal)
-    c = a + b
-
-    # Mengembalikan suatu nilai
-    # return ini hanya dapat digunakan di dalam fungsi
-    # tanpa return, fungsi akan mengembalikan None
-    return c
-
-def add_dengan_argumen(angka1, angka2): # Ambil dua nilai dari argumen untuk dijumlahkan
-    hasil = angka1 + angka2
-    return hasil
-
-def f():
-    print('Mengembalikan angka 1') #  Perintah ini tidak berada di dalam fungsi apapun
-    return 1
-
-L = add_tanpa_argumen()
+L = fungsi.add_tanpa_argumen()
 
 print('Hasil penjumlahan: ', L)
 
-M = add_dengan_argumen(3, 9)
+M = fungsi.add_dengan_argumen(3, 9)
 
 print('Hasil penjumlahan: ', M)
+
+N = pgr.pengurangan(8, 6)
+
+print('Hasil Pengurangan:', N)

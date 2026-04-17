@@ -16,6 +16,13 @@ def <nama fungsi>(<argumen1>, <argumen2>, dst.):
 
 ## Dependensi/modul Python
 
+- Digunakan untuk memanggil suatu file atau modul
+
+- Sintaks:
+
+   - `import <nama modul> as <alias>`
+   - `from <nama modul> import <**fungsi**/objek>`
+
 ## Tipe Data
 
 ## If Statement
