@@ -71,4 +71,26 @@ mahasiswa = {
     ]
 }
 
-print(mahasiswa['nim'])
+# =====================================================================================
+# Input statement
+# Meminta masukan melalui konsol (masukan diterima dalam bentuk string)
+
+nama = input("Masukkan nama kamu: ")
+umur = input("Masukkan umur kamu: ")  
+# Jika angka hendak dilakukan operasi matematika, maka harus diubah 
+# kedalam bentuk angka terlebih dahulu menggunakan int() atau float()
+
+# cara 1
+print('Halo', nama)
+
+# cara 2
+print(f'Halo {nama}!')
+
+# cara 3
+print('Halo {}!'.format(nama))
+
+# cara 4
+print('Halo %s!!' % nama)
+
+# gabungkan nama dengan umurnya 5 tahun mendatang
+print('Halo %s! Umur kamu 5 tahun mendatang adalah %s' % (nama, int(umur) + 5))
