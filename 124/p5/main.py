@@ -5,7 +5,10 @@
 #       ii. Long -> 4 byte => 2^32 - 1  (bukan fitur python)
 #    b. Float (bilangan dengan koma (contoh: 1.1, 2.7, 3.14))
 # 2. Teks/string
-# 3. Array/List => mengandung banyak nilai
+# 3. Boolean
+# 4. Array/List => mengandung banyak nilai
+# 5. Tuple
+# 6. Dictionary
 
 # Bilangan desimal: bilangan basis 10 (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 # Bilangan biner: bilangan basis 2
