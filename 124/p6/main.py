@@ -79,18 +79,19 @@ def is_stay(hujan, berangin):
 
     return stay
 
-# selain operator logika, bisa juga menggunakan operator matematika jika pengkondisian bergantung dengan angka
-# operator matematika membandingkan satu angka dengan yang lain
-# contoh operator matematika
+# selain operator logika, bisa juga menggunakan operator pembanding jika pengkondisian bergantung dengan angka
+# operator pembanding membandingkan satu angka dengan yang lain
+# contoh operator pembanding
 # 1. == (sama dengan)
 # 2. < (kurang dari)
 # 3. > (lebih dari)
 # 4. <= (kurang dari atau sama dengan)
 # 5. >= (lebih besar atau sama dengan)
-# operator matematika ekslusif untuk penggunaan angka (tipe data selain angka tidak berfungsi/error)
-# contoh penggunaan operator matematika:
+# operator pembanding ekslusif untuk penggunaan angka (tipe data selain angka tidak berfungsi/error)
+# contoh penggunaan operator pembanding:
 # 3 == 4 (3 sama dengan 4) -> menghasilkan logika False
 # digunakan jika sudah menggunakan angka dalam proses pengkondisian
+# hasil dari operator pembanding adalah boolean
 
 # deklarasi variabel nilai
 def f4():
@@ -122,6 +123,11 @@ def f4():
 # gunakan "elif" untuk pengkondisian lebih dari 2
 
 nilai = int(input('Masukkan nilai: '))
+
+is_lulus = nilai >= 70
+if is_lulus:
+    print('anda lulus')
+
 if nilai <= 45:
     # jika tidak terpenuhi, maka pengkondisian akan dilempar ke elif
     huruf = 'E'
