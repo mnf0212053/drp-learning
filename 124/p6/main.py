@@ -79,8 +79,58 @@ def is_stay(hujan, berangin):
 
     return stay
 
-# OUTPUT
-if is_stay(True, False):
-    print('saya tetap di rumah')
+# selain operator logika, bisa juga menggunakan operator matematika jika pengkondisian bergantung dengan angka
+# operator matematika membandingkan satu angka dengan yang lain
+# contoh operator matematika
+# 1. == (sama dengan)
+# 2. < (kurang dari)
+# 3. > (lebih dari)
+# 4. <= (kurang dari atau sama dengan)
+# 5. >= (lebih besar atau sama dengan)
+# operator matematika ekslusif untuk penggunaan angka (tipe data selain angka tidak berfungsi/error)
+# contoh penggunaan operator matematika:
+# 3 == 4 (3 sama dengan 4) -> menghasilkan logika False
+# digunakan jika sudah menggunakan angka dalam proses pengkondisian
+
+# deklarasi variabel nilai
+def f4():
+    nilai = 70
+
+    # jika nilai = 70, maka beri notifikasi "nilai ngepas!"
+    if nilai == 70:
+        print('nilai ngepas')
+
+    # jika nilai kurang dari 70, maka beri notifikasi "tidak lulus"
+    if nilai < 70:
+        print('tidak lulus')
+    else:
+        print('selamat anda lulus')
+
+# implementasi fungsi untuk konversi nilai angka ke nilai huruf (A, A-, B+)
+# 86-100 A 4
+# 81-85 A- 3,7
+# 76-80 B+ 3,3
+# 71-75 B 3,0
+# 66-70 B- 2,7
+
+# 61-65 C+ 2,3
+# 56-60 C 2,0
+# 51-55 C- 1,7
+# 46-50 D 1
+# 0-45 E 0
+
+# gunakan "elif" untuk pengkondisian lebih dari 2
+
+nilai = int(input('Masukkan nilai: '))
+if nilai <= 45:
+    # jika tidak terpenuhi, maka pengkondisian akan dilempar ke elif
+    huruf = 'E'
+elif nilai <= 50:
+    # jika if sudah terpenuhi, maka fungsi ini tidak dijalankan
+    huruf = 'D'
+elif nilai <= 55:
+    huruf = 'C-'
 else:
-    print('saya keluar rumah')
+    huruf = 'A'
+
+print(huruf)
