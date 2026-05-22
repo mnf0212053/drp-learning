@@ -1,3 +1,6 @@
+from manager.search import search_products
+from manager.output import print_products
+
 def display_menu():
     # Tampilan pilihan menu (UI)
     print('================================')
@@ -13,6 +16,10 @@ def select_menu(menu):
     if menu == '1':
         # Logic untuk fitur pencarian barang
         print('Anda mengakses menu "Cari Barang"')
+
+        query = input('Masukkan query: ')
+        products = search_products(query)
+        print_products(products)
     elif menu == '2':
         # Logic untuk fitur list keranjang
         print('Anda mengakses menu "List Keranjang"')
