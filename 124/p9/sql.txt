@@ -1,0 +1,39 @@
+SQL = Standard Query Language -> Database (basis data)
+DBMS = Database Management System
+-> SQLite -> Teknologi paling primitif
+   buat file .db -> diolah menggunakan SQL
+-> PostgreSQL
+-> MySQL
+-> Clickhouse -> Data engineer
+
+CRUD :
+-> Create  (INSERT INTO (col1, col2, ...) VALUES (val1, val2, ...))
+-> Read    (SELECT * from table)
+-> Update  (UPDATE table SET col1 = val1, col2 = val2, ... WHERE <condition>)
+-> Delete  (DELETE FROM table WHERE <condition>)
+
+contoh condition:
+id = 1
+email = test@example.com
+
+users -> nama tabel
+id,email,password,...
+(biasanya password dihash)
+id | email | password | ...
+1    a@b.com | 12345
+2
+3
+
+username = myuser
+password = 888888  ->  dalam tabel, password = $2b$12$R9h/cIPz0gi.URNNX3kh2OPST9/PgBkqquzi.Ss7KIUgO2t0jWMUW
+
+
+
+-> Computation
+-> Cron
+.
+.
+.
+
+
+Client (tampilan) -> Server -> Database
