@@ -1,6 +1,5 @@
-[
-  "sate",
-  "ikan",
-  "buku",
-  ""
-]
+[{
+  "id": 1,
+  "product": "Office Table",
+  "qty": 4
+}]

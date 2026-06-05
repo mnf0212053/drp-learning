@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Botol Minum Edura 330 ml",
+        "price_unit": 2000
+    },
+    {
+        "id": 2,
+        "name": "Meja Belajar",
+        "price_unit": 80000
+    },
+    {
+        "id": 3,
+        "name": "Kursi Lipat",
+        "price_unit": 45000
+    }
+]
