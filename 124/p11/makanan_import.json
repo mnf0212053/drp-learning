@@ -1,0 +1,14 @@
+[
+    {
+        "id": 4,
+        "nama": "Pizza",
+        "rasa": "Asin",
+        "cara_dimasak": "Rebus"
+    },
+    {
+        "id": 5,
+        "nama": "Tempe Mendoan",
+        "rasa": "Asin",
+        "cara_dimasak": "Digoreng"
+    }
+]

@@ -51,6 +51,7 @@ def display_menu():
     print('1. Tambah Data Makanan')
     print('2. Catat Histori Makan')
     print('3. Ekspor Data Makanan')
+    print('4. Impor Data Makanan')
 
 def tambah_makanan(connection):
     # UI/UX
@@ -124,6 +125,77 @@ def export_makanan(connection):
 
     return
 
+def import_makanan(connection):
+    # ada 2 pendekatan
+    # 1. Sertakan ID
+    # file json
+    # [
+    #   {
+    #      "id": 1,
+    #      "nama": "Nasi"
+    #   }
+    # ]
+    # karena ID adalah unique identifier, maka jika di dalam database terdapat record dengan ID yang sama, maka biasanya ada konflik
+    # terkadang solusinya adalah record di dalam database akan tertimpa (overwrite) dengan data yang baru
+    # 2. Tidak menyertakan ID
+    # [
+    #   {
+    #      "nama": "Nasi"
+    #   }
+    # ]
+    # karena tidak ada unique identifier, maka pada umumnya semua data yang akan diimport akan mengisi database (INSERT INTO)
+    # ada kemungkinan data di dalam database akan mengalami duplikasi
+
+    # Panggil file terlebih dahulu
+    # r = read, w = write
+    with open('makanan_import.json', 'r') as f:
+        data = json.load(f)
+        f.close()
+
+    # cek terlebih dahulu ID data, jika ID sudah terpakai
+    # maka record akan ditimpa dengan data baru
+
+    # query untuk cek apakah id sudah ada
+    # jika tidak ada, akan menghasilkan data kosong
+    query_check_id = """
+        SELECT id FROM makanan WHERE id = ?
+    """
+
+    # masukkan "data" ke dalam database
+    query_create = """
+        INSERT INTO makanan (nama, rasa, cara_dimasak) values (?, ?, ?)
+    """
+
+    # untuk query where, gunakan ID (unique identifier)
+    # untuk dijadikan sebagai target edit
+    # WHERE WAJIB
+    query_update = """
+        UPDATE makanan
+        SET nama = ?, rasa = ?, cara_dimasak = ?
+        WHERE id = ?; 
+    """
+
+    cursor = connection.cursor()
+
+    # Karena "data" berbentuk list, maka harus diiterasi
+    for d in data:
+        # buat logic terlebih dahulu untuk menentukan apakah
+        # data dicreate atau update
+        # jika ID ada, maka update id tersebut
+        # namun jika tidak ada, maka buat baru
+        cursor.execute(query_check_id, (d['id'],))  # untuk tuple satu item, gunakan (data,)
+        is_exist = cursor.fetchone()
+
+        if is_exist:
+            # update
+            cursor.execute(query_update, (d['nama'], d['rasa'], d['cara_dimasak'], d['id']))
+        else:
+            # create
+            cursor.execute(query_create, (d['nama'], d['rasa'], d['cara_dimasak']))
+
+    connection.commit()
+    print('Import data berhasil.')
+
 def manage_menu(connection, menu):
     if menu == '1':
         tambah_makanan(connection)
@@ -133,6 +205,8 @@ def manage_menu(connection, menu):
     elif menu == '3':
         # Export data makanan dari database ke file json
         export_makanan(connection)
+    elif menu == '4':
+        import_makanan(connection)
 
 
 if __name__ == '__main__':
