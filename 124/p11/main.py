@@ -52,6 +52,7 @@ def display_menu():
     print('2. Catat Histori Makan')
     print('3. Ekspor Data Makanan')
     print('4. Impor Data Makanan')
+    print('5. Hitung semua data makanan')
 
 def tambah_makanan(connection):
     # UI/UX
@@ -88,7 +89,8 @@ def lihat_makanan(connection):
         """
     )
 
-    print(cursor.fetchall())
+    for data in cursor.fetchall():
+        print(data)
 
 def export_makanan(connection):
     query = """
@@ -126,6 +128,7 @@ def export_makanan(connection):
     return
 
 def import_makanan(connection):
+    """
     # ada 2 pendekatan
     # 1. Sertakan ID
     # file json
@@ -148,6 +151,7 @@ def import_makanan(connection):
 
     # Panggil file terlebih dahulu
     # r = read, w = write
+    """
     with open('makanan_import.json', 'r') as f:
         data = json.load(f)
         f.close()
@@ -196,6 +200,23 @@ def import_makanan(connection):
     connection.commit()
     print('Import data berhasil.')
 
+def hitung_jumlah_makanan(connection):
+    # output adalah total jumlah makanan yang ada di dalam database
+    query = """
+        select * from makanan;
+    """
+
+    cursor = connection.cursor()
+    cursor.execute(query)
+
+    data = cursor.fetchall()
+    jumlah_makanan = len(data)
+
+    print(f'Jumlah total makanan adalah {jumlah_makanan}')
+    # contoh pengolahan data lain:
+    # 1. Jumlah makanan yang rasanya asin?
+    # 2. Jumlah makanan yang cara makannya digoreng?
+
 def manage_menu(connection, menu):
     if menu == '1':
         tambah_makanan(connection)
@@ -207,6 +228,8 @@ def manage_menu(connection, menu):
         export_makanan(connection)
     elif menu == '4':
         import_makanan(connection)
+    elif menu == '5':
+        hitung_jumlah_makanan(connection)
 
 
 if __name__ == '__main__':
