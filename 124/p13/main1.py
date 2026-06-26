@@ -5,7 +5,7 @@ if __name__ == '__main__':
     filename = 'tahun-2021-cakupan-bayi-diimunisasi-polio.csv'
 
     with open(filename, newline='') as f:
-        data = list(csv.reader(f))[1:7]
+        data = list(csv.reader(f))[1:]
 
     print('Sebelum Mapping')
     print(data[0:5])
