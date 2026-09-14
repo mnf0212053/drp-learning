@@ -73,8 +73,61 @@ x = 2*3
 # 4. pembagian
 x = 3/2
 
-# Sequence Types:	list, tuple, range (array)
-# Mapping Type:	dict
+# Sequence Types:	list, tuple (array)
+# Tipe data yang nilainya lebih dari satu, paling sering digunakan dalam pengolahan data
+
+# 1. List []
+# Contoh: Mengukur tinggi badan mahasiswa
+tinggi_badan = [170, 163, 165, 160]
+
+# 2. Tuple ()
+subtotal = (5000, 20000)
+
+# Mapping Type:	dict (objek)
+# objek yang memiliki berbagai variabel, dinyatakan dengan tanda {}
+# umumnya disebut sebagai pasangan key-value. 
+# Key (kunci) umumnya digunakan sebagai konteks dari value/nilai
+# Key umumnya ditulis dalam teks/string, namun bisa juga dalam angka
+# Contoh 1:
+user_profile = {
+    'name': "Budi Santoso",
+    'username': 'budi123',
+    'umur': 20,
+    'nilai_ujian': [
+        70,
+        80,
+        85,
+        95
+    ]
+}
+
+# Contoh 2 (array dari objek)
+user_profiles = [
+    {
+        'name': "Budi Santoso",
+        'username': 'budi123',
+        'umur': 20,
+        'nilai_ujian': [
+            70,
+            80,
+            85,
+            95
+        ]
+    },
+    {
+        'name': "Abdul Manaf",
+        'username': 'abdul2000',
+        'umur': 25,
+        'nilai_ujian': [
+            80,
+            70,
+            75,
+            80
+        ]
+    }
+]
+
+
 # Set Types:	set, frozenset
 # Boolean Type:	bool
 # Binary Types:	bytes, bytearray, memoryview
