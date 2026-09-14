@@ -35,6 +35,10 @@
 # variabel ketiga memiliki konteks yang kurang jelas, sehingga maknanya ambigu
 # jika ada spasi, umumnya diganti dengan underscore (_)
 # contoh: tempat lahir -> tempat_lahir
+# variabel diawali dengan alfabet, bukan dengan angka
+# 3_pendidikan_terakhir X
+# tiga_pendidikan_terakhir V
+# tempat-lahir X -> dianggap sebagai pengurangan
 
 # TIPE DATA
 # Text Type:	str (teks/string)
