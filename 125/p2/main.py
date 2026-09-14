@@ -43,15 +43,23 @@
 # TIPE DATA
 # Text Type:	str (teks/string)
 # Umumnya digunakan untuk tulisan, tidak dapat dioperasikan secara matematis ( + - , dst.)
-# indikator tipe data string adalah tanda petik ' atau ""
+# Contoh: "Andi" + "Budi"  X -> tidak dapat dioperasikan secara matematis
+# indikator tipe data string adalah sepasang tanda petik ' atau "
+# Contoh
+# nama = Budi -> Tidak ada tanda petik, "Budi" dianggap sebagai variabel
+# nama = "Budi" -> termasuk teks/string
 # Contoh:
 nama = 'Budi'  # X
 domisili = "Bandung"
+motto = "I'm okay"  # -> kasus petik satu di dalam string
+sentence = 'Kancil berkata "Aku tidak apa-apa"' # -> kasus petik dua di dalam string
+sentence2 = "The fox says \"I\'m hungry\""  # -> Kasus petik dua dan petik satu di dalam string, menggunakan backslash \
 
 # Untuk tipe string dapat menggunakan petik (") sebanyak tiga rangkap untuk teks yang
 # panjang dan membutuhkan baris baru
 # Contoh:
 about_me = """Saya adalah seorang mahasiswa.
+    Saya adalah warga depok.
     Setiap hari saya pergi ke kampus."""
 
 # Numeric Types:	int, float, complex (angka)
@@ -69,7 +77,7 @@ umur = 20
 # Contoh:
 tebal_buku = 3.5
 
-# 3. kompleks (bilangan imajiner/akar -1)
+# 3. kompleks (bilangan imajiner/akar -1) -> biasa digunakan dalam komputasi saintifik
 # fasa = 3*i + 5
 # i = bilangan imajiner atau akar -1
 
@@ -91,6 +99,9 @@ x = 3/2
 # Contoh 1: apakah user sudah terkonfirmasi
 is_confirmed = True
 
+# Contoh 2: apakah user sudah registrasi
+is_registered = False
+
 # Sequence Types:	list, tuple (array)
 # Tipe data yang nilainya lebih dari satu, paling sering digunakan dalam pengolahan data
 
@@ -98,12 +109,16 @@ is_confirmed = True
 # Contoh: Mengukur tinggi badan mahasiswa
 tinggi_badan = [170, 163, 165, 160]
 
-# 2. Tuple ()
+# 2. Tuple () -> dipakai secara teknis, manipulasi data terbatas
 subtotal = (5000, 20000)
 
 # Mapping Type:	dict (objek)
-# objek yang memiliki berbagai variabel, dinyatakan dengan tanda {}
+# objek yang memiliki berbagai variabel, dinyatakan dengan tanda {} (kurung kurawal)
 # umumnya disebut sebagai pasangan key-value. 
+# formatnya:
+# {
+#     'tempat_lahir': "Bogor"
+# }
 # Key (kunci) umumnya digunakan sebagai konteks dari value/nilai
 # Key umumnya ditulis dalam teks/string, namun bisa juga dalam angka
 # Contoh 1:
@@ -147,9 +162,6 @@ user_profiles = [
         ]
     }
 ]
-
-# Contoh 2: apakah user sudah registrasi
-is_registered = False
 
 # Binary Types:	bytes, bytearray, memoryview
 # tipe biner, umumnya digunakan untuk file (gambar, video, pdf, dst.)
