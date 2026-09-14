@@ -3,7 +3,7 @@
 # .py = ekstensi untuk python
 # Contoh ekstensi
 # .pdf -> buka dokumen
-# .doc / .docx -> file document
+# .doc / .docx -> file ms. word
 # .xls / xlsx -> file excel
 # .ppt / .pptx -> file powerpoint
 # Ekstensi selalu diawali dengan titik (.) tanpa ada titik tambahan di belakangnya
@@ -14,9 +14,18 @@
 # Tanda Hastag mengindikasikan komentar (tidak akan dijalankan oleh Python)
 
 # variabel = simbol yang menandakan suatu nilai yang bisa berubah
-# contoh: x = 4
+# contoh 1: x = 4
 # x -> variabel
-# 3 -> nilai
+# 4 -> nilai
+# contoh 2: x = 5
+# variabel x tetap sama
+# nilainya berbeda
+
+# dalam Python, Untuk kasus nilai x dideklarasikan dua kali:
+# x = 3
+# x = 5
+# Python akan menggunakan nilai x terakhir
+
 # penamaan variabel berfungsi untuk memperjelas konteks
 # Contoh:
 # 1. tempat_lahir = "Bogor"  V
