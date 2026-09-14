@@ -73,6 +73,11 @@ x = 2*3
 # 4. pembagian
 x = 3/2
 
+# Boolean Type:	bool
+# hanya memiliki dua nilai (true/false)
+# Contoh 1: apakah user sudah terkonfirmasi
+is_confirmed = True
+
 # Sequence Types:	list, tuple (array)
 # Tipe data yang nilainya lebih dari satu, paling sering digunakan dalam pengolahan data
 
@@ -93,6 +98,7 @@ user_profile = {
     'name': "Budi Santoso",
     'username': 'budi123',
     'umur': 20,
+    'is_verified': True,
     'nilai_ujian': [
         70,
         80,
@@ -107,6 +113,7 @@ user_profiles = [
         'name': "Budi Santoso",
         'username': 'budi123',
         'umur': 20,
+        'is_verified': True,
         'nilai_ujian': [
             70,
             80,
@@ -118,6 +125,7 @@ user_profiles = [
         'name': "Abdul Manaf",
         'username': 'abdul2000',
         'umur': 25,
+        'is_verified': False,
         'nilai_ujian': [
             80,
             70,
@@ -127,8 +135,15 @@ user_profiles = [
     }
 ]
 
+# Contoh 2: apakah user sudah registrasi
+is_registered = False
 
-# Set Types:	set, frozenset
-# Boolean Type:	bool
 # Binary Types:	bytes, bytearray, memoryview
+# tipe biner, umumnya digunakan untuk file (gambar, video, pdf, dst.)
+
 # None Type:	NoneType
+# tipe kosong, tidak memiliki nilai. 
+# Umumnya digunakan untuk placeholder atau deklarasi 
+# bisa juga menandakan variabel tersebut belum diisi
+# Contoh: user belum memasukkan domisili
+domisili = None
