@@ -1,6 +1,7 @@
 # ========================================================================================================================
 # Program Hello World
 # Print statement -> pernyataan untuk mencetak suatu teks ke dalam terminal
+# Berfungsi untuk menampilkan keluaran (output) dari program
 # Sintaks: print(<teks yang akan dicetak/tampil>)
 
 # Contoh 1:
@@ -25,6 +26,29 @@
 
 # ========================================================================================================================
 # Running program Python:
+
+# Input Statement
+# Berfungsi untuk meminta masukan (input) dari pengguna melalui CLI/Terminal
+# Sintaks:
+# <variabel> = input(<prompt>)
+# Contoh 1:
+
+# nama = input("Masukkan nama: ")  # Input
+# print(f"Halo, {nama}!")
+
+# fungsi input perlu ditampung dalam suatu variabel agar dapat diolah. 
+# tipe data dari variabel tersebut berbentuk teks/string.
+
+# Contoh 2:
+umur = input("Masukkan umur kamu: ")
+# umur_tahun_depan = umur + 1  # -> baris ini error karena menjumlahkan string dan angka, harus disamakan terlebih dahulu
+umur_tahun_depan = int(umur) + 1  # -> fungsi int() digunakan untuk mengubah string menjadi integer
+print(f"Umur kamu adalah {umur}, tahun depan umur kamu adalah {umur_tahun_depan}")
+
+# Fungsi
+# contoh: f(x) = x + 1  -> fungsi dalam matematika
+# format fungsi dalam programming -> <nama fungsi>(<argumen1>, <argumen2>, <dst>)
+# identik dengan f(x, y) = 2xy + y^2
 
 # Cara 1 melalui CLI (full)
 # 1. Melalui CLI, navigasi ke direktori yang memiliki file python yang akan dirunning (menggunakan perintah "cd" dalam terminal)
