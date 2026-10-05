@@ -35,6 +35,16 @@ f = lambda x: int(x) + 1
 
 # Operator
 # Jenis operator dalam Python:
+
+# 1. Aritmatika
+# 2. Assignment
+# 3. Ternary
+# 4. Comparison
+# 5. Logical
+# 6. Identitas
+# 7. Membership
+# 8. Bitwise
+
 # 1. Aritmatika
 # | +  | 	Addition	                x + y	
 # | -  | 	Subtraction	                x - y	
